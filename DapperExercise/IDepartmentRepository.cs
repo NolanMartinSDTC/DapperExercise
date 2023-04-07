@@ -4,8 +4,8 @@ namespace DapperExercise
 {
 	public interface IDepartmentRepository
 	{
-		IEnumerable<Department> GetAllDepartments();
-		//IEnumerable<Department> InsertDepartments();
+		public IEnumerable<Department> GetAllDepartments();
+		public void InsertDepartment(string newDepartmentName);
 	}
 }
 

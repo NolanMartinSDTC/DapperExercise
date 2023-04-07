@@ -9,10 +9,33 @@
 
   <ItemGroup>
     <None Include="bin\Debug\net6.0\appsettings.json" />
+    <None Include="obj\Debug\net6.0\ref\DapperExercise.dll" />
+    <None Include="obj\Debug\net6.0\refint\DapperExercise.dll" />
+    <None Include="obj\Debug\net6.0\apphost" />
+    <None Include="obj\Debug\net6.0\DapperExercise.AssemblyInfoInputs.cache" />
+    <None Include="obj\Debug\net6.0\DapperExercise.assets.cache" />
+    <None Include="obj\Debug\net6.0\DapperExercise.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\net6.0\DapperExercise.csproj.CopyComplete" />
+    <None Include="obj\Debug\net6.0\DapperExercise.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\net6.0\DapperExercise.csproj.FileListAbsolute.txt" />
+    <None Include="obj\Debug\net6.0\DapperExercise.dll" />
+    <None Include="obj\Debug\net6.0\DapperExercise.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="obj\Debug\net6.0\DapperExercise.genruntimeconfig.cache" />
+    <None Include="obj\Debug\net6.0\DapperExercise.pdb" />
+    <None Include="obj\DapperExercise.csproj.nuget.dgspec.json" />
+    <None Include="obj\DapperExercise.csproj.nuget.g.props" />
+    <None Include="obj\DapperExercise.csproj.nuget.g.targets" />
+    <None Include="obj\project.assets.json" />
+    <None Include="obj\project.nuget.cache" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
     <PackageReference Include="Dapper" Version="2.0.123" />
     <PackageReference Include="MySql.Data" Version="8.0.32.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" />
+    <Compile Include="obj\Debug\net6.0\DapperExercise.AssemblyInfo.cs" />
+    <Compile Include="obj\Debug\net6.0\DapperExercise.GlobalUsings.g.cs" />
   </ItemGroup>
 </Project>

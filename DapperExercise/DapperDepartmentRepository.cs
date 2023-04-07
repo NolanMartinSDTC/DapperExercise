@@ -9,7 +9,8 @@ namespace DapperExercise
 	{
 		private readonly IDbConnection _connection;
 
-		public DapperDepartmentRepository(IDbConnection connection)
+        // Constructor
+        public DapperDepartmentRepository(IDbConnection connection)
 		{
 			_connection = connection;
 		}
@@ -19,7 +20,7 @@ namespace DapperExercise
             return _connection.Query<Department>("SELECT * FROM Departments;").ToList();
         }
 
-        public void InsertDepartments(string newDepartmentName)
+        public void InsertDepartment(string newDepartmentName)
         {
             _connection.Execute("INSERT INTO DEPARTMENTS (Name) VALUES (@departmentName);", new { departmentName = newDepartmentName});
         }
