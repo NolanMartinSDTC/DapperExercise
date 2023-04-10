@@ -17,18 +17,20 @@ class Program
         var repo = new DapperDepartmentRepository(conn);
         var prodRepo = new DapperProductRepository(conn);
 
-        //Console.WriteLine("Type a new Department name: ");
+        // Exercise 1
 
-        //var newDepartment = Console.ReadLine();
+        Console.WriteLine("Type a new Department name: ");
 
-        //repo.InsertDepartment(newDepartment);
+        var newDepartment = Console.ReadLine();
 
-        //var departments = repo.GetAllDepartments();
-        //Console.WriteLine("All Departments\n");
-        //foreach (var dept in departments)
-        //{
-        //    Console.WriteLine(dept.Name);
-        //}
+        repo.InsertDepartment(newDepartment);
+
+        var departments = repo.GetAllDepartments();
+        Console.WriteLine("All Departments\n");
+        foreach (var dept in departments)
+        {
+            Console.WriteLine(dept.Name);
+        }
 
         // Exercise 2
 
@@ -50,6 +52,38 @@ class Program
         foreach (var prod in products)
         {
             Console.WriteLine($"{prod.Name} {prod.ProductID} {prod.Price}");
+        }
+
+        // Update Product Bonus
+
+        Console.WriteLine("Enter a ProductID to update: ");
+        var prodID = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Enter the updated name: ");
+        var updatedName = Console.ReadLine();
+
+        prodRepo.UpdateProduct(prodID, updatedName);
+        products = prodRepo.GetAllProducts();
+        Console.WriteLine("All Products\n");
+
+        foreach (var prod in products)
+        {
+            Console.WriteLine($"{prod.ProductID} {prod.Name} {prod.Price}");
+        }
+
+        Console.WriteLine();
+
+        // Delete Product Bonus
+
+        Console.WriteLine("What is the ProductID you want to delete?");
+        prodID = int.Parse(Console.ReadLine());
+        prodRepo.DeleteProduct(prodID);
+        products = prodRepo.GetAllProducts();
+        Console.WriteLine("All Products\n");
+
+        foreach (var prod in products)
+        {
+            Console.WriteLine($"{prod.ProductID} {prod.Name} {prod.Price}");
         }
     }
 }
